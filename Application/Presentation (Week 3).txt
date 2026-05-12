@@ -1,0 +1,109 @@
+Welcome everyone. Last week, I worked on application topic and I started to implement the things I learned using React, FastAPI and PostgreSQL. Today, I will talk about these.
+
+
+
+This presentation includes what is HTML and CSS? And why we don't use just these? Why we use React for frontend?
+Why JavaScript used in React instead of other programming languages?
+I will talk about react core concepts like state, props, hook, component and routing.
+What is RestAPI and FastAPI and how can be it implemented?
+And finally, why we use PostgreSQL as database and what is neonDB and why it is used?
+
+
+
+This slide shows the structure of a web application. A web app usually has three main parts: the frontend, the backend, and the database.
+The frontend is what users see and interact with. It is built with React in our project.
+The backend handles the logic, processes requests, and communicates with the database. We use FastAPI for this.
+The database stores all the data. We use PostgreSQL and NeonDB for cloud hosting.
+Sometimes, web applications also use third-party services for extra features, like sending emails or analytics. This diagram helps you understand how these parts connect and work together.
+
+
+
+Lets begin with HTML and CSS to talk about used tools in web application development. What is HTML and CSS?
+HTML defines the structure of a web page, while CSS is responsible for the design and layout.
+They are essential for building the foundation of websites. 
+However, they are limited because they can only create static pages. 
+Without JavaScript or frameworks, we cannot build interactive or dynamic applications.
+
+
+
+That's why, we use React while developing frontend part.
+React allows us to build applications in a more modern and scalable way. 
+Instead of writing everything in plain HTML, React uses a component-based structure, where each part of the UI is reusable. 
+It makes the application dynamic, interactive, and highly performant with the Virtual DOM. 
+The large ecosystem and community also make development faster and easier.
+
+
+
+React is built on JavaScript because JavaScript is the only language that browsers can natively understand.
+It enables us to add interactivity, handle data, and connect with backend services.
+React combines JavaScript with HTML and CSS, so we can create powerful user interfaces directly in the browser.
+
+
+
+Why dont we use other languages?
+Languages like Python, Java, or C# are mainly used on the backend. 
+They cannot run directly in the browser. 
+JavaScript is unique because it runs natively in every browser. 
+That is why React is built on JavaScript. 
+It allows us to instantly update the UI and handle interactions seamlessly.
+
+
+
+React provides us with several important concepts. 
+Components are the building blocks of the UI, and they can be reused across the application.  
+This image represents component logic. First, we define the components. Then, we can use them wherever we want, as much as we want.
+
+Props allow us to pass data from a parent component to a child component. They are read-only, which means the child cannot change the value of props directly. This makes components reusable and predictable because the data flow is always one-way.
+
+State, on the other hand, is managed inside the component itself. It can change over time, usually in response to user actions like clicking a button or typing in a form. Each component can have its own states, which makes the UI dynamic and interactive.
+
+Hooks give us more control over logic and lifecycle. Most common hooks are useState and useEffect.
+useState lets us create and manage a component’s internal state.
+useEffect lets us run side effects in a component, like fetching data or updating the DOM after a render.
+It can run once, on every render, or only when specific values change
+
+
+
+Here is a simple example.
+In this component, step is a prop. It is passed from the parent component, so we can control how much the counter increases. Prop is sent by App component by value 2.
+"count" is a state variable. It belongs to the component itself and changes when the user clicks the button.
+useState is the hook that lets us create by default value 0 and update state.
+useEffect is another hook. It runs after the component updates, in this case logging the new count value.
+
+
+
+With routing support, we can build entire multi-page applications easily. 
+Routing allows us to define different pages or views in our application and navigate between them without reloading the browser. 
+In Next.js, routing is even simpler because it is file-based: each file in the pages folder automatically becomes a route.
+
+
+A REST API defines a way for the frontend and backend to communicate.
+The frontend, built with React, sends requests to the backend, which in our case is FastAPI.
+The backend responds with JSON data, and the frontend uses it to update the interface. 
+This separation allows scalability and cleaner code.
+
+This is an example of a REST API endpoint. 
+When the frontend sends a GET request to /polls, FastAPI returns JSON data with the poll questions and their options. 
+React then takes this JSON and updates the interface to show the polls. 
+This separation keeps frontend and backend code clean and scalable.
+
+
+
+FastAPI is a modern Python framework designed for building APIs quickly and efficiently. 
+It supports asynchronous operations, which makes it very fast. 
+It also comes with automatic data validation and documentation, which saves a lot of development time. 
+Since it’s built with Python, it integrates well with databases and even machine learning models.
+
+This is a screenshot of FastAPI’s automatic documentation. FastAPI generates an interactive API docs page for all endpoints. From here, we can test each endpoint directly, without needing the frontend. It’s very useful for checking the API responses, debugging, and understanding how the backend works.
+
+
+
+PostgreSQL is a powerful relational database.
+It stores data in structured tables with relationships, making it reliable and efficient for complex queries. 
+It is open-source, highly scalable, and widely adopted across industries. 
+That’s why it’s a great choice for storing our poll data securely.
+
+NeonDB is a cloud-hosted version of PostgreSQL. 
+It uses the same SQL language and the same structure, but it removes the need to manage servers manually. 
+With NeonDB, we get automatic scaling, backups, and easy deployment. 
+This makes it much more convenient for modern applications compared to running PostgreSQL only on a local server.
